@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  backend-build:
 
     runs-on: ubuntu-latest
 
@@ -26,6 +26,18 @@ jobs:
       run: npm install
       working-directory: ./backend
 
+    # Run backend tests
+    - name: Run backend tests
+      run: npm test
+      working-directory: ./backend
+
+  frontend-build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
 
     # Setup Node.js environment for frontend
     - name: Setup Node.js for frontend
@@ -38,6 +50,7 @@ jobs:
       run: npm install
       working-directory: ./frontend
 
-    - name: Run tests for frontend
+    # Run frontend tests
+    - name: Run frontend tests
       run: npm test
       working-directory: ./frontend

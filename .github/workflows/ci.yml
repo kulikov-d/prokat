@@ -1,12 +1,10 @@
-name: CI
+name: CI/CD Pipeline
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
   pull_request:
-    branches:
-      - main
+    branches: [ main ]
 
 jobs:
   build:
@@ -17,13 +15,40 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Set up Node.js
+    # Setup Node.js environment for backend
+    - name: Setup Node.js for backend
       uses: actions/setup-node@v2
       with:
-        node-version: '18.x'
+        node-version: '14'
+        working-directory: ./backend
 
-    - name: Install dependencies
+    - name: Install dependencies for backend
       run: npm install
+      working-directory: ./backend
 
-    - name: Run tests
+    - name: Run backend build
+      run: npm run build
+      working-directory: ./backend
+
+    # Setup Node.js environment for frontend
+    - name: Setup Node.js for frontend
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+        working-directory: ./frontend
+
+    - name: Install dependencies for frontend
+      run: npm install
+      working-directory: ./frontend
+
+    - name: Run frontend build
+      run: npm run build
+      working-directory: ./frontend
+
+    - name: Run tests for backend
       run: npm test
+      working-directory: ./backend
+
+    - name: Run tests for frontend
+      run: npm test
+      working-directory: ./frontend

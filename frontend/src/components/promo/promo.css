@@ -1,0 +1,47 @@
+.promo{
+    max-width: 100%;
+    background-image: 
+    linear-gradient(
+        rgba(255, 255, 255, 0), 
+    rgba(255, 255, 255, 1)
+  ), url('../../img/promo-bg.png');
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100%;
+    min-height: 900px;
+    display:flex;
+    align-items: center;
+    
+    
+}
+
+.promo-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 3%;
+    padding: 20px;
+    min-width: 400px;
+    min-height: 250px;
+    max-width:min-content;
+    background: rgba(255, 255, 255, 0.7);
+    margin-left: 20px;
+}
+
+.promo-text>h1{
+    font-size: 25px;
+    font-weight: bold;
+    
+}
+
+.promo-text>p{
+    font-size: 20px;
+    font-weight: normal;
+}
+.promo-text>div>a{
+    padding: 10px;
+
+}

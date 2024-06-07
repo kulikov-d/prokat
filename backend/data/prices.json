@@ -1,0 +1,18 @@
+{
+  "enduro": {
+    "hourly": {
+      "1_hour": 1000,
+      "2_hours": 4000,
+      "additional_hour": 1000,
+      "full_day": 8000
+    }
+  },
+  "pitbikes": {
+    "hourly": {
+      "1_hour": 1500,
+      "2_hours": 3000,
+      "additional_hour": 800,
+      "full_day": 6000
+    }
+  }
+}

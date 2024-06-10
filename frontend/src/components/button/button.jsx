@@ -66,7 +66,7 @@ function Button() {
       return;
     }
 
-    axios.post('http://192.168.0.101:3001/submit', { ...formData, phone: normalizedPhone })
+    axios.post('http://localhost:3001/submit', { ...formData, phone: normalizedPhone })
       .then(response => {
         console.log('Form submitted successfully');
         setIsFormSubmitted(true);

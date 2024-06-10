@@ -2,13 +2,14 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import './motorcycles.css';
 
+
 function Motorcycles() {
   const [motorcycles, setMotorcycles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   useEffect(() => {
-    axios.get("http://192.168.0.101:3001/motorcycles")
+    axios.get(`http://localhost:3001/motorcycles`)
       .then(response => {
         setMotorcycles(response.data);
         setLoading(false);

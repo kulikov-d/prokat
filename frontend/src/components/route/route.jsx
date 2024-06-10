@@ -10,7 +10,7 @@ function Route() {
   const [error, setError] = useState(null);  // Добавляем состояние для ошибки
 
   useEffect(() => {
-    axios.get("http://192.168.0.101:3001/routes")
+    axios.get(`http://localhost:3001/routes`)
       .then(response => {
         setRoutes(response.data);
         setLoading(false);  // Устанавливаем загрузку в false после получения данных

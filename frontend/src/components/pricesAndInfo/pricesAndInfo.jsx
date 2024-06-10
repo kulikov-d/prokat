@@ -10,7 +10,7 @@ function PricesAndInfo() {
 
   useEffect(() => {
     // Отправляем GET-запрос к маршруту нашего сервера для получения данных о ценах
-    axios.get("http://192.168.0.101:3001/prices")
+    axios.get(`http://localhost:3001/prices`)
       .then(response => {
         // Если запрос успешен, устанавливаем полученные данные в состояние компонента
         setPrices(response.data);

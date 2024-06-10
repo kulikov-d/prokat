@@ -22,9 +22,25 @@ app.use('/motorcycles_img', express.static(path.join(__dirname, '/data/motorcycl
 app.use('/route_img', express.static(path.join(__dirname, '/data/route_img')));
 
 // Telegram Bot
+
+
 const bot = new Bot(process.env.BOT_API_KEY);
+
+bot.api.setMyCommands([
+  { command: "start", description: "Start the bot" },
+  { command: "idchat", description: "Get chat id" },
+]);
+
+
 bot.command('start', async (ctx) => {
-  await ctx.reply('Привет! Я - Бот Руслан🤖');
+  await ctx.reply('Привет! Я - Бот Руслана ');
+});
+
+
+
+
+bot.command('idchat', async (ctx) => {
+  await ctx.reply(ctx.chat.id);
 });
 
 bot.start();

@@ -12,7 +12,6 @@ const app = express();
 const port = 3001;
 const filter = new Filter();
 
-// Middleware для обработки CORS и JSON-запросов
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -21,9 +20,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/motorcycles_img', express.static(path.join(__dirname, '/data/motorcycles_img')));
 app.use('/route_img', express.static(path.join(__dirname, '/data/route_img')));
 
+
+
+
 // Telegram Bot
-
-
 const bot = new Bot(process.env.BOT_API_KEY);
 
 bot.api.setMyCommands([
@@ -31,13 +31,9 @@ bot.api.setMyCommands([
   { command: "idchat", description: "Get chat id" },
 ]);
 
-
 bot.command('start', async (ctx) => {
   await ctx.reply('Привет! Я - Бот Руслана ');
 });
-
-
-
 
 bot.command('idchat', async (ctx) => {
   await ctx.reply(ctx.chat.id);
@@ -45,7 +41,7 @@ bot.command('idchat', async (ctx) => {
 
 bot.start();
 
-// Маршрут для обработки данных формы
+
 app.post('/submit', (req, res) => {
   const { firstName, lastName, phone } = req.body;
 
@@ -63,7 +59,7 @@ app.post('/submit', (req, res) => {
 
   const message = `Новая заявка:\nИмя: ${firstName}\nФамилия: ${lastName}\nТелефон: <a href="tel:${phone}">${phone}</a>`;
 
-  // Отправляем сообщение в Telegram-бот
+  
   bot.api.sendMessage(process.env.CHAT_ID, message, { parse_mode: 'HTML' })
     .then(() => {
       res.status(200).send('Form submitted successfully');
@@ -75,7 +71,7 @@ app.post('/submit', (req, res) => {
 });
 
 
-// Маршрут для получения данных о маршрутах
+
 app.get('/routes', (req, res) => {
   const filePath = path.join(__dirname, '/data/route.json');
   console.log(`Reading file: ${filePath}`);
@@ -115,7 +111,7 @@ app.get('/prices', (req, res) => {
   });
 });
 
-// Маршрут для получения данных о мотоциклах
+
 app.get('/motorcycles', (req, res) => {
   const filePath = path.join(__dirname, '/data/motorcycles.json');
   console.log(`Reading file: ${filePath}`);

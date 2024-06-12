@@ -2,25 +2,25 @@
 
     {
       "id": 1,
-     "image": "http://192.168.0.101:3001/motorcycles_img/ataki.png",
+     "image": "http://localhost:3001/motorcycles_img/ataki.png",
       "title": "Ataki 300",
       "description": "Эндуро"
     },
     {
       "id": 2,
-     "image": "http://192.168.0.101:3001/motorcycles_img/RacerRC300.png",
+     "image": "http://localhost:3001/motorcycles_img/RacerRC300.png",
       "title": "Racer RC300",
       "description": "Эндуро"
     },
     {
       "id": 3,
-     "image": "http://192.168.0.101:3001/motorcycles_img/BSE_Z4.png",
+     "image": "http://localhost:3001/motorcycles_img/BSE_Z4.png",
       "title": "BSE Z4",
       "description": "Эндуро"
     },
     {
       "id": 4,
-     "image": "http://192.168.0.101:3001/motorcycles_img/JMC160.png",
+     "image": "http://localhost:3001/motorcycles_img/JMC160.png",
 
       "title": "JMC 160",
       "description": "ПитБайк"

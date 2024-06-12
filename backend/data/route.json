@@ -1,28 +1,28 @@
 
 [
     {
-      "image": "http://192.168.0.101:3001/route_img/route_blue_quarry.jpg",
+      "image": "http://localhost:3001/route_img/route_blue_quarry.jpg",
       "title": "Голубой карьер",
       "description": "Маршрут для тех кто не боится намочить свои ноги Маршрут частично проходит по трассе мегаквадроциклов, всегда есть шанс увидеть квадрогигантов,а так же мы посетим военные блиндажи и окопы, затем последняя точка на маршруте это Голубой Карьер отличное место для фотосессий! ",
       "complexity": "Средняя",
       "id": 1
     },
     {
-      "image": "http://192.168.0.101:3001/route_img/route_seven_brothers.jpg",
+      "image": "http://localhost:3001/route_img/route_seven_brothers.jpg",
       "title": "Cкалы 7 братьев",
       "description": "Пролегает через шикарные панорамы под ЛЭП, искупаемся на оз.Таватуй, и одно из самых не простых мест это преодоление русла реки протяжённостью порядка 300м.",
       "complexity": "Выше средней",
       "id": 2
     },
     {
-      "image": "http://192.168.0.101:3001/route_img/route_quarry.jpg",
+      "image": "http://localhost:3001/route_img/route_quarry.jpg",
       "title": "Заброшенный карьер",
       "description": "Маршрут проходит через монастырь — Ганина Яма, реку Шувакиш на обратном пути посетим Эндуро трассу",
       "complexity": "Лёгкая",
       "id": 3
     },
     {
-        "image": "http://192.168.0.101:3001/route_img/route_damn_town.jpg",
+        "image": "http://localhost:3001/route_img/route_damn_town.jpg",
         "title": "Чертово городище",
         "description": "Гора и одноимённый скальный массив на её вершине",
         "complexity": "Средняя",

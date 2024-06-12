@@ -38,7 +38,6 @@ function Route() {
     routes[currentIndex],
     routes[(currentIndex + 1) % routes.length]
   ];
-  console.log(routes)
   return (
     <div className="route-container-wrapper" id="route">
       <h2 className="route-header">Наши Маршруты</h2>

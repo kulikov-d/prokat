@@ -2,6 +2,7 @@ import React from "react";
 import logo from '../../img/logo.png'
 import Button from "../button/button";
 import telegramIcon from '../../icons/telegram.png'
+import wappIcon from '../../icons/whatsApp.png'
 import phoneIcon from '../../icons/phone.png'
 import './header.css'
 
@@ -22,10 +23,13 @@ function Header(){
                 </a>
             </div>
             <div className="header-contact">
-                <a href="https://t.me/mptoham">
+                <a href="#">
                     <img src={telegramIcon} alt="telegram" className="contact-icon" />
                 </a>
-                <a href="tel:+79920083299">
+                <a href="https://wa.me/70000000000">
+                    <img src={wappIcon} alt="whatsapp" className="contact-icon" />
+                </a>
+                <a href="tel:+70000000000">
                     <img src={phoneIcon} alt="telegram" className="contact-icon" />
                 </a>
             </div>

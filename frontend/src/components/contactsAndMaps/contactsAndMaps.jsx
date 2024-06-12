@@ -6,10 +6,10 @@ function ContactsAndMaps() {
     <div className="contacts-and-maps">
       <div className="footer">
         <h2>Контакты :</h2>
-        <a href="tel:79920083299" >Телефон: +7 (992) 008-32-99</a>
-        <a href="tel:79961787495" >Телефон: +7 (996) 178-74-95</a>
-        <a href="tel:79532083282" >Телефон: +7 (953) 821-33-82</a>
-        <a href="https://t.me/mptoham">
+        <a href="tel:70000000000" >Телефон: +7 000 000-00-00</a>
+        <a href="tel:70000000000" >Телефон: +7 000 000-00-00</a>
+        <a href="tel:70000000000" >Телефон: +7 000 000-00-00</a>
+        <a href="#">
                     <img src={telegramIcon} alt="telegram" className="contact-icon" />
                 </a>
       </div>
